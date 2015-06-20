@@ -1,24 +1,3 @@
-function animate(element) {
-    $(element).velocity({ translateX: "-100px" }, {duration: 0});
-    $(element).velocity({opacity: "1", translateX: "0"}, {duration: 800, easing: [60, 10]});
-}
-
-function generateTemplate(data) {
-    // в реальности здесь бы вызвался шаблонизатор
-    var fragment = document.createDocumentFragment();
-    var header = document.createElement('h4');
-    var phone = document.createElement('p');
-    var deleteLink = document.createElement('a');
-    deleteLink.className = 'secondary-content';
-    deleteLink.innerHTML = '<i class="remove mdi-action-highlight-remove"></i>';
-    header.textContent = data.name;
-    phone.textContent = data.phone;
-    fragment.appendChild(deleteLink);
-    fragment.appendChild(header);
-    fragment.appendChild(phone);
-    return fragment;
-}
-
 $(function() {
 
 
